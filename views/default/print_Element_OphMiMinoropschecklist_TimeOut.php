@@ -18,24 +18,21 @@
  */
 ?>
 
-<?php
-	$this->breadcrumbs=array($this->module->id);
-	$this->header();
-?>
+<h4 class="elementTypeName"><?php echo $element->elementType->name?></h4>
 
-<h3 class="withEventIcon"><?php echo $this->event_type->name?></h3>
-
-<?php
-if ($this->canPrint()) {
-	$this->event_actions[] = EventAction::button('Print', 'print');
-}
-$this->renderPartial('//patient/event_actions');
-?>
-
-<div>
-	<?php $this->renderDefaultElements($this->action->id)?>
-	<?php $this->renderOptionalElements($this->action->id)?>
-	<div class="cleartall"></div>
-</div>
-
-<?php $this->footer()?>
+<table class="subtleWhite normalText">
+	<tbody>
+		<tr>
+			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('patient_name_checked'))?></td>
+			<td><span class="big"><?php echo $element->patient_name_checked ? 'Yes' : 'No'?></span></td>
+		</tr>
+		<tr>
+			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('procedure_planned'))?></td>
+			<td><span class="big"><?php echo $element->procedure_planned ? 'Yes' : 'No'?></span></td>
+		</tr>
+		<tr>
+			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('site_marked_x'))?></td>
+			<td><span class="big"><?php echo $element->site_marked_x ? 'Yes' : 'No'?></span></td>
+		</tr>
+	</tbody>
+</table>
