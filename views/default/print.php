@@ -25,7 +25,7 @@
 	<table cellspacing="0" width="1000">
 		<tbody>
 			<tr>
-				<td align="left" width="20%"><?php echo CHtml::image(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('OphMiPatienteducation.assets')).'/img/logo1.jpg'); ?></td>
+				<td align="left" width="20%"><?php echo CHtml::image(Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('OphMiMinoropschecklist.assets')).'/img/logo1.jpg'); ?></td>
 				<td align="left" width="45%"><h1 style="margin-top:40px;">Minor ops checklist</h1></td>
 				<td align="left" width="30%" style="border: 1px solid gray;">
 					<p style="padding:3px; margin-left:10px; margin-bottom:0px;">ORBIS# <?php echo $this->patient->hos_num?></p>
