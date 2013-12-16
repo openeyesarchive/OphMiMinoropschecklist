@@ -44,7 +44,6 @@ CREATE TABLE `et_ophmiminoropschecklist_timeout_version` (
 	public function down()
 	{
 		$this->dropColumn('et_ophmiminoropschecklist_timeout','deleted');
-		$this->dropColumn('et_ophmiminoropschecklist_timeout_version','deleted');
 
 		$this->dropTable('et_ophmiminoropschecklist_timeout_version');
 	}
