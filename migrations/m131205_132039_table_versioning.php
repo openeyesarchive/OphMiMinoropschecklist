@@ -22,7 +22,7 @@ CREATE TABLE `et_ophmiminoropschecklist_timeout_version` (
 	CONSTRAINT `acv_et_ophmiminoropschecklist_timeout_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophmiminoropschecklist_timeout_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophmiminoropschecklist_timeout_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophmiminoropschecklist_timeout_version','id','int(10) unsigned NOT NULL');
